@@ -20,6 +20,6 @@ from learn import views2 as learn_views2
 
 urlpatterns = [
     url(r'^$', learn_views.index),
-    url(r'^$', learn_views2.Subpage),
+    url(r'^Subpage.html/', learn_views2.Subpage), #Named with 'Subpage.html/' that can access subpages!
     url(r'^admin/', admin.site.urls),
 ]
