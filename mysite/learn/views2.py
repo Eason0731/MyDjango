@@ -6,5 +6,5 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 
-def index(request):
+def Subpage(request):
     return HttpResponse(u'你好,John!')
