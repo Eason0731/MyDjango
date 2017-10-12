@@ -7,4 +7,4 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def Subpage(request):
-    return HttpResponse(u'你好,John!')
+    return HttpResponse(u'CG吃大香肠!')
