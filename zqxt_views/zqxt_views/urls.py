@@ -19,6 +19,7 @@ from django.contrib import admin
 from calc import views as calc_views
 
 urlpatterns = [
+    url(r'^$',calc_views.index,name='index'),
     url(r'^add/$', calc_views.add, name='add'),
     url(r'^add/(\d*.\d*)/(\d*.\d*)/$', calc_views.add2, name='add2'), #正则表达式:add/(\d+)/(\d+)   (\d+)为1个或1个以上的整数  (\d*)可以为任意个整数，包括0个
     url(r'^subtract/(\d*.\d*)/(\d*.\d*)/$',calc_views.subtract,name='subtract'),

@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
+def index(Request):
+    return render(Request,'index.html') #Use render then access to calc/templates/index.html
 
 def add(Request):
     a = Request.GET['a']
