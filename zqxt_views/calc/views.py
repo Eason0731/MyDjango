@@ -30,7 +30,7 @@ def multiply(Request,a,b):
 
 def divide(request,a,b):
     if float(b) == 0:
-        return HttpResponse(u'0不能作为除数')
+        return HttpResponse('0 cannot be used as divisor') #判断0不能为除数
     else:
         k = float(a) / float(b)
     return HttpResponse(str(k))
