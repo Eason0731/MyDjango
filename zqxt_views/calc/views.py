@@ -4,16 +4,16 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from django.core.urlresolvers import reverse #To import reverse
+from django.http import HttpResponseRedirect #To import HttpResponseRedirect
+
 # Create your views here.
 def index(Request):
     return render(Request,'index.html') #Use render then access to calc/templates/index.html
 
-def add(Request):
-    a = Request.GET['a']
-    b = Request.GET['b']
-    c = float(a) + float(b)
-    return HttpResponse(str(c))
-    #URL format is:http://127.0.0.1:8000/add/?a=111&b=333
+def add_redirect_to_newadd(Request,a,b):
+    return HttpResponseRedirect(reverse('add2', args=(a,b)))
+    #The old direct url will return to the new one
 
 def add2(Request,a,b):
     c = float(a) + float(b)
