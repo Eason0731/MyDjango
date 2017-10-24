@@ -1,5 +1,9 @@
+{% if not request.user.is_authenticated %}
 {% if 'McLaren' in myList%}
 McLaren在此列表中
 {% else %}
 McLaren不在此列表中
+{% endif %}
+{% else %}
+You are the logged user
 {% endif %}
